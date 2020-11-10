@@ -1,1 +1,33 @@
 # Pi_WebCAM
+
+Target Board : Raspberry Pi 3 Model B+
+
+(1). Create Yocto Project
+
+1. Repo Flow 
+https://hub.mender.io/t/raspberry-pi-3-model-b-b/57
+
+2. Git Flow (*)
+https://www.hackster.io/marc-antoine-woodcock/yocto-project-and-nas-server-on-raspberry-pi-3-41b58b
+
+(2). Raspberry Pi META  
+
+1. META DATA
+https://github.com/agherzan/meta-raspberrypi
+
+2. META DATA Document
+https://meta-raspberrypi.readthedocs.io/_/downloads/en/rocko/pdf/
+https://meta-raspberrypi.readthedocs.io/_/downloads/en/pyro/pdf/
+
+(3). Prepare Package 
+ 
+1. Yocto Project Quick Start
+
+Ubuntu and Debian:
+> sudo apt-get install gawk wget git-core diffstat unzip texinfo build-essential chrpath libsdl1.2-dev xterm
+
+Refernce:
+https://www.yoctoproject.org/docs/1.5/yocto-project-qs/yocto-project-qs.html
+
+ 
+
