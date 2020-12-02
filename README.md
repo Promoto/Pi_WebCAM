@@ -7,14 +7,14 @@ https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/?resellerType=h
 
 (1). Create Yocto Project
 
-1. Repo Flow  
-https://hub.mender.io/t/raspberry-pi-3-model-b-b/57
-
-2. Git Flow (x) => fail: 燒錄後HDMI無法顯示東西  
-https://www.hackster.io/marc-antoine-woodcock/yocto-project-and-nas-server-on-raspberry-pi-3-41b58b
-
-3. Building Raspberry Pi Systems with Yocto (*)  
+1. Building Raspberry Pi Systems with Yocto (*)  
 https://jumpnowtek.com/rpi/Raspberry-Pi-Systems-with-Yocto.html
+
+reference:  
+https://t.codebug.vip/questions-104850.htm
+https://www.youtube.com/watch?v=zVLKPtGCtN4
+http://kcmetercec.top/2019/09/17/yocto_build_raspberry_linux/
+https://subscription.packtpub.com/book/virtualization_and_cloud/9781788399210
 
 (2). Raspberry Pi META  
 
@@ -22,6 +22,7 @@ https://jumpnowtek.com/rpi/Raspberry-Pi-Systems-with-Yocto.html
 https://github.com/agherzan/meta-raspberrypi
 
 2. META DATA Document:  
+https://readthedocs.org/projects/meta-raspberrypi/downloads/pdf/latest/
 https://meta-raspberrypi.readthedocs.io/_/downloads/en/rocko/pdf/  
 https://meta-raspberrypi.readthedocs.io/_/downloads/en/pyro/pdf/
 
@@ -34,5 +35,7 @@ https://meta-raspberrypi.readthedocs.io/_/downloads/en/pyro/pdf/
 2. Refernce:  
 https://www.yoctoproject.org/docs/1.5/yocto-project-qs/yocto-project-qs.html
 
+(4). Scan the Raspberry Pi IP:  
+https://www.advanced-ip-scanner.com/tw/ 
  
 
