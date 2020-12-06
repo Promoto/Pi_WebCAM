@@ -40,5 +40,22 @@ https://www.yoctoproject.org/docs/1.5/yocto-project-qs/yocto-project-qs.html
 
 1. IP Scanner  
 https://www.advanced-ip-scanner.com/tw/ 
+
+(5). Real Time Streaming Protocol [RTSP]  
+
+1. RTSP WIKI  
+https://zh.wikipedia.org/zh-tw/%E5%8D%B3%E6%99%82%E4%B8%B2%E6%B5%81%E5%8D%94%E5%AE%9A
+
+
+(n). eBook  
+https://www.yoctoproject.org/docs/1.7.3/dev-manual/dev-manual.pdf
+https://allitbooks.net/hardware-diy/1003-yocto-raspberry-pi.html
+
+
+
+
+
+
+
  
 
