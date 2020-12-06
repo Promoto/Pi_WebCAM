@@ -1,0 +1,16 @@
+git clone git://git.yoctoproject.org/poky.git
+mkdir sources
+cd sources
+git clone git://git.openembedded.org/meta-openembedded
+git clone https://github.com/agherzan/meta-raspberrypi.git
+cd ..
+
+source poky/oe-init-build-env rpi-build
+bitbake-layers add-layer ../sources/meta-raspberrypi 
+bitbake-layers add-layer ../sources/meta-openembedded/
+bitbake-layers add-layer ../sources/meta-openembedded/meta-oe/
+bitbake-layers add-layer ../sources/meta-openembedded/meta-python/
+bitbake-layers add-layer ../sources/meta-openembedded/meta-networking/
+bitbake-layers add-layer ../sources/meta-openembedded/meta-multimedia/
+
+bitbake core-image-base
