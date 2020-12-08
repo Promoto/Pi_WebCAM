@@ -69,13 +69,18 @@ cmake
 	-DCMAKE_CXX_COMPILER="/home/cyber/SDK/sysroots/x86_64-ostl_sdk-linux/usr/bin/arm-ostl-linux-gnueabi/arm-ostl-linux-gnueabi-g++" 
 	-DCMAKE_LINKER="/home/cyber/SDK/sysroots/x86_64-ostl_sdk-linux/usr/bin/arm-ostl-linux-gnueabi/arm-ostl-linux-gnueabi-ld --sysroot=/home/cyber/SDK/sysroots/cortexa7t2hf-neon-vfpv4-ostl-linux-gnueabi"
 	-DCMAKE_AR="/home/cyber/SDK/sysroots/x86_64-ostl_sdk-linux/usr/bin/arm-ostl-linux-gnueabi/arm-ostl-linux-gnueabi-ar"
-
+	
+	
+cmake -DCMAKE_C_COMPILER="arm-ostl-linux-gnueabi-gcc -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 --sysroot=/home/cyber/SDK/sysroots/cortexa7t2hf-neon-vfpv4-ostl-linux-gnueabi" -DCMAKE_CXX_COMPILER="arm-ostl-linux-gnueabi-g++ -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 --sysroot=/home/cyber/SDK/sysroots/cortexa7t2hf-neon-vfpv4-ostl-linux-gnueabi" -DCMAKE_LINKER="arm-ostl-linux-gnueabi-ld --sysroot=/home/cyber/SDK/sysroots/cortexa7t2hf-neon-vfpv4-ostl-linux-gnueabi" -DCMAKE_AR="arm-ostl-linux-gnueabi-ar"
+	-DSOFTFP=ON
+	-DCMAKE_TOOLCHAIN_FILE=/home/cyber/SRC/opencv/platforms/linux/arm-gnueabi.toolchain.cmake /home/cyber/SRC/opencv
+	
 reference:
 https://docs.opencv.org/master/d0/d76/tutorial_arm_crosscompile_with_cmake.html
 
 (n). eBook  
-https://www.yoctoproject.org/docs/1.7.3/dev-manual/dev-manual.pdf
-https://allitbooks.net/hardware-diy/1003-yocto-raspberry-pi.html
+https://www.yoctoproject.org/docs/1.7.3/dev-manual/dev-manual.pdf  
+https://oiipdf.com/yocto-for-raspberry-pi
 
 
 
