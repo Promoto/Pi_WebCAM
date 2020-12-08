@@ -81,6 +81,7 @@ https://docs.opencv.org/master/d0/d76/tutorial_arm_crosscompile_with_cmake.html
 (n). eBook  
 https://www.yoctoproject.org/docs/1.7.3/dev-manual/dev-manual.pdf  
 https://oiipdf.com/yocto-for-raspberry-pi
+https://tldp.org/LDP/lkmpg/2.6/lkmpg.pdf
 
 
 
