@@ -34,6 +34,7 @@ https://meta-raspberrypi.readthedocs.io/_/downloads/en/pyro/pdf/
 > sudo apt-get install gawk wget git-core diffstat unzip texinfo build-essential chrpath libsdl1.2-dev xterm
 
 2. Refernce:  
+https://docs.yoctoproject.org/  
 https://www.yoctoproject.org/docs/1.5/yocto-project-qs/yocto-project-qs.html
 
 (4). Scan the Raspberry Pi IP:  
@@ -47,9 +48,11 @@ https://www.advanced-ip-scanner.com/tw/
 https://zh.wikipedia.org/zh-tw/%E5%8D%B3%E6%99%82%E4%B8%B2%E6%B5%81%E5%8D%94%E5%AE%9A
 
 
+(6). Local.Conf
+
+
 
 (10). opencv cross compile: (到底哪裡錯了 = =??? 幹
-
 
 Opencv Cross Compile:
 

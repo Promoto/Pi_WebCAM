@@ -14,3 +14,8 @@ bitbake-layers add-layer ../sources/meta-openembedded/meta-networking/
 bitbake-layers add-layer ../sources/meta-openembedded/meta-multimedia/
 
 bitbake core-image-base
+
+## programing image to sdcard
+sudo fdisk -l
+sudo apt-get install bmap-tools
+sudo bmaptool copy core-image-base-raspberrypi3-20201207131751.rootfs.wic.bz2 /dev/sdb
