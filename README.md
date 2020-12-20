@@ -10,6 +10,8 @@ https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/?resellerType=h
 1. Building Raspberry Pi Systems with Yocto (*)  
 https://jumpnowtek.com/rpi/Raspberry-Pi-Systems-with-Yocto.html
 https://www.hackster.io/marc-antoine-woodcock/yocto-project-and-nas-server-on-raspberry-pi-3-41b58b
+https://blog.csdn.net/zzs0829/article/details/109708216
+
 
 2. Reference:    
 https://t.codebug.vip/questions-104850.htm  

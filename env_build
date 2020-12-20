@@ -1,8 +1,14 @@
+########################################################
+#########	Building Up Yocto Enviroment       #########
+########################################################
+
 git clone git://git.yoctoproject.org/poky.git
 mkdir sources
 cd sources
 git clone git://git.openembedded.org/meta-openembedded
 git clone https://github.com/agherzan/meta-raspberrypi.git
+git clone https://github.com/meta-qt5/meta-qt5
+git clone git://git.yoctoproject.org/meta-security.git
 cd ..
 
 source poky/oe-init-build-env rpi-build
@@ -12,10 +18,48 @@ bitbake-layers add-layer ../sources/meta-openembedded/meta-oe/
 bitbake-layers add-layer ../sources/meta-openembedded/meta-python/
 bitbake-layers add-layer ../sources/meta-openembedded/meta-networking/
 bitbake-layers add-layer ../sources/meta-openembedded/meta-multimedia/
+bitbake-layers add-layer ../sources/meta-openembedded/meta-perl/
+bitbake-layers add-layer ../sources/meta-qt5
+bitbake-layers add-layer ../sources/meta-security
 
 bitbake core-image-base
 
-## programing image to sdcard
+########################################################
+#########	Programing Image to SDCARD         #########
+########################################################
+
 sudo fdisk -l
 sudo apt-get install bmap-tools
-sudo bmaptool copy core-image-base-raspberrypi3-20201207131751.rootfs.wic.bz2 /dev/sdb
+sudo bmaptool copy core-image-base-raspberrypi3.wic.bz2 /dev/sdb
+
+########################################################
+#########	Building Up Yocto Enviroment       #########
+########################################################
+
+bitbake-layers show-recipes
+bitbake-layers show-layers
+bitbake-layers remove-layer ../sources/meta-jumpnow
+
+########################################################
+#########	Devtool for modify the source code #########
+########################################################
+
+devtool modify tf-a-stm32mp
+
+git status
+git add .
+git commit -m "update content by bossen"
+
+devtool build tf-a-stm32mp
+
+devtool finish tf-a-stm32mp meta-st-stm32mp
+
+reference:
+https://wiki.phytec.com/pages/viewpage.action?pageId=127338558
+
+
+
+
+
+
+
