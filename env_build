@@ -57,9 +57,27 @@ devtool finish tf-a-stm32mp meta-st-stm32mp
 reference:
 https://wiki.phytec.com/pages/viewpage.action?pageId=127338558
 
+########################################################
+######### Extract the SDK from Yocto 		   #########
+########################################################
 
+sudo apt-get install make git-core ncurses-dev
 
+git clone https://github.com/raspberrypi/tools.git
 
+export PATH=$PATH:/home/jack/Yocto/sdk/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin
 
+arm-linux-gnueabihf-gcc hello.c -o hello-arm
+
+reference:  
+https://www.raspberrypi.com.tw/tag/cross-compiler/  
+
+###################################
+######### CROSS COMPLIER ENV SETUP SCRIPT 	   #########
+########################################################
+
+CC = arm-linux-gnueabihf-gcc
+AR = 
+LD = 
 
 

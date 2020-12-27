@@ -47,13 +47,12 @@ https://www.advanced-ip-scanner.com/tw/
 
 (5). RTSP / H.264 / H.265
 
-https://pypi.org/project/rtsp/
-https://zh.wikipedia.org/zh-tw/%E5%8D%B3%E6%99%82%E4%B8%B2%E6%B5%81%E5%8D%94%E5%AE%9A  
+https://pypi.org/project/rtsp/  
+https://zh.wikipedia.org/zh-tw/%E5%8D%B3%E6%99%82%E4%B8%B2%E6%B5%81%E5%8D%94%E5%AE%9A   
 https://tools.ietf.org/html/rfc2326  
-https://zh.wikipedia.org/wiki/%E5%AE%9E%E6%97%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE
-https://b8807053.pixnet.net/blog/post/3611245
-https://zh.wikipedia.org/wiki/H.264/MPEG-4_AVC
-
+https://zh.wikipedia.org/wiki/%E5%AE%9E%E6%97%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE  
+https://b8807053.pixnet.net/blog/post/3611245  
+https://zh.wikipedia.org/wiki/H.264/MPEG-4_AVC  
 
 (10). opencv cross compile: (到底哪裡錯了 = =??? 幹
 
@@ -81,7 +80,7 @@ cmake -DCMAKE_C_COMPILER="arm-ostl-linux-gnueabi-gcc -mthumb -mfpu=neon-vfpv4 -m
 	-DSOFTFP=ON
 	-DCMAKE_TOOLCHAIN_FILE=/home/cyber/SRC/opencv/platforms/linux/arm-gnueabi.toolchain.cmake /home/cyber/SRC/opencv
 	
-reference:
+reference:  
 https://docs.opencv.org/master/d0/d76/tutorial_arm_crosscompile_with_cmake.html	
 
 (n). eBook  
