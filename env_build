@@ -58,7 +58,7 @@ reference:
 https://wiki.phytec.com/pages/viewpage.action?pageId=127338558
 
 ########################################################
-######### Extract the SDK from Yocto 		   #########
+######### CROSS COMPLIER ENV SETUP SCRIPT 	   #########
 ########################################################
 
 sudo apt-get install make git-core ncurses-dev
@@ -72,12 +72,13 @@ arm-linux-gnueabihf-gcc hello.c -o hello-arm
 reference:  
 https://www.raspberrypi.com.tw/tag/cross-compiler/  
 
-###################################
-######### CROSS COMPLIER ENV SETUP SCRIPT 	   #########
+########################################################
+######### Learn Tools 	   						########
 ########################################################
 
-CC = arm-linux-gnueabihf-gcc
-AR = 
-LD = 
-
+1. sql_lite
+2. net-snmp
+3. llighttpd
+4. opencv
+5. 
 

@@ -54,6 +54,10 @@ https://zh.wikipedia.org/wiki/%E5%AE%9E%E6%97%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%A
 https://b8807053.pixnet.net/blog/post/3611245  
 https://zh.wikipedia.org/wiki/H.264/MPEG-4_AVC  
 
+reference: (好多神 = = 
+https://github.com/PHZ76/RtspServer
+
+
 (10). opencv cross compile: (到底哪裡錯了 = =??? 幹
 
 Opencv Cross Compile:
