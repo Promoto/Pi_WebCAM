@@ -47,6 +47,8 @@ https://www.advanced-ip-scanner.com/tw/
 
 (5). RTSP / H.264 / H.265
 
+https://github.com/PHZ76/RtspServer  
+
 https://pypi.org/project/rtsp/  
 https://zh.wikipedia.org/zh-tw/%E5%8D%B3%E6%99%82%E4%B8%B2%E6%B5%81%E5%8D%94%E5%AE%9A   
 https://tools.ietf.org/html/rfc2326  
@@ -54,38 +56,24 @@ https://zh.wikipedia.org/wiki/%E5%AE%9E%E6%97%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%A
 https://b8807053.pixnet.net/blog/post/3611245  
 https://zh.wikipedia.org/wiki/H.264/MPEG-4_AVC  
 
-reference: (好多神 = = 
-https://github.com/PHZ76/RtspServer
+(10). opencv cross compile
 
+(11). opencv import into yocto
 
-(10). opencv cross compile: (到底哪裡錯了 = =??? 幹
+(12). Get USB Camera Image
 
-Opencv Cross Compile:
+sudo apt install fswebcam
 
-git clone https://github.com/opencv/opencv.git	
-mkdir build
-cd build
-rm ../CMakeCache.txt
+fswebcam image.jpg
 
-// tool chain: /home/cyber/SDK/sysroots/x86_64-ostl_sdk-linux/usr/bin/arm-ostl-linux-gnueabi/	
+reference:
+https://www.raspberrypi.org/documentation/usage/webcams/
 
-cmake 
-	-DSOFTFP=ON
-	-DCMAKE_TOOLCHAIN_FILE=/home/cyber/SRC/opencv/platforms/linux/arm-gnueabi.toolchain.cmake /home/cyber/SRC/opencv	
-	-CMAKE_C_FLAGS="-mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 --sysroot=/home/cyber/SDK/sysroots/cortexa7t2hf-neon-vfpv4-ostl-linux-gnueabi"
-	-DCMAKE_C_COMPILER="/home/cyber/SDK/sysroots/x86_64-ostl_sdk-linux/usr/bin/arm-ostl-linux-gnueabi/arm-ostl-linux-gnueabi-gcc" 
-	-CMAKE_CXX_FLAGS="-mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 --sysroot=/home/cyber/SDK/sysroots/cortexa7t2hf-neon-vfpv4-ostl-linux-gnueabi"
-	-DCMAKE_CXX_COMPILER="/home/cyber/SDK/sysroots/x86_64-ostl_sdk-linux/usr/bin/arm-ostl-linux-gnueabi/arm-ostl-linux-gnueabi-g++" 
-	-DCMAKE_LINKER="/home/cyber/SDK/sysroots/x86_64-ostl_sdk-linux/usr/bin/arm-ostl-linux-gnueabi/arm-ostl-linux-gnueabi-ld --sysroot=/home/cyber/SDK/sysroots/cortexa7t2hf-neon-vfpv4-ostl-linux-gnueabi"
-	-DCMAKE_AR="/home/cyber/SDK/sysroots/x86_64-ostl_sdk-linux/usr/bin/arm-ostl-linux-gnueabi/arm-ostl-linux-gnueabi-ar"
-	
-	
-cmake -DCMAKE_C_COMPILER="arm-ostl-linux-gnueabi-gcc -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 --sysroot=/home/cyber/SDK/sysroots/cortexa7t2hf-neon-vfpv4-ostl-linux-gnueabi" -DCMAKE_CXX_COMPILER="arm-ostl-linux-gnueabi-g++ -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 --sysroot=/home/cyber/SDK/sysroots/cortexa7t2hf-neon-vfpv4-ostl-linux-gnueabi" -DCMAKE_LINKER="arm-ostl-linux-gnueabi-ld --sysroot=/home/cyber/SDK/sysroots/cortexa7t2hf-neon-vfpv4-ostl-linux-gnueabi" -DCMAKE_AR="arm-ostl-linux-gnueabi-ar"
-	-DSOFTFP=ON
-	-DCMAKE_TOOLCHAIN_FILE=/home/cyber/SRC/opencv/platforms/linux/arm-gnueabi.toolchain.cmake /home/cyber/SRC/opencv
-	
-reference:  
-https://docs.opencv.org/master/d0/d76/tutorial_arm_crosscompile_with_cmake.html	
+(13).  Samba
+
+sudo apt-get install samba
+
+sudo vim /etc/samba/smb.conf
 
 (n). eBook  
 https://www.yoctoproject.org/docs/1.7.3/dev-manual/dev-manual.pdf  	
