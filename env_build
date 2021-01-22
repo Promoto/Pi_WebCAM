@@ -1,5 +1,5 @@
 ########################################################
-#########	Building Up Yocto Enviroment       #########
+#########	Building Up Yocto Enviroment       
 ########################################################
 
 git clone git://git.yoctoproject.org/poky.git
@@ -25,7 +25,7 @@ bitbake-layers add-layer ../sources/meta-security
 bitbake core-image-base
 
 ########################################################
-#########	Programing Image to SDCARD         #########
+#########	Programing Image to SDCARD         
 ########################################################
 
 sudo fdisk -l
@@ -33,7 +33,7 @@ sudo apt-get install bmap-tools
 sudo bmaptool copy core-image-base-raspberrypi3.wic.bz2 /dev/sdb
 
 ########################################################
-#########	Building Up Yocto Enviroment       #########
+#########	Building Up Yocto Enviroment       
 ########################################################
 
 bitbake-layers show-recipes
@@ -58,7 +58,7 @@ reference:
 https://wiki.phytec.com/pages/viewpage.action?pageId=127338558
 
 ########################################################
-######### CROSS COMPLIER ENV SETUP SCRIPT 	   #########
+######### CROSS COMPLIER ENV SETUP SCRIPT 	  
 ########################################################
 
 sudo apt-get install make git-core ncurses-dev
@@ -73,7 +73,7 @@ reference:
 https://www.raspberrypi.com.tw/tag/cross-compiler/  
 
 ########################################################
-######### Learn Tools 	   						########
+######### Learn Tools 	   						
 ########################################################
 
 1. sql_lite
@@ -81,4 +81,11 @@ https://www.raspberrypi.com.tw/tag/cross-compiler/
 3. llighttpd
 4. opencv
 5. 
+
+########################################################
+######### Opencv http stream 	   						
+########################################################
+
+pip install flask
+
 

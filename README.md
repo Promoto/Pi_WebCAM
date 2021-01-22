@@ -48,13 +48,17 @@ https://www.advanced-ip-scanner.com/tw/
 (5). RTSP / H.264 / H.265
 
 https://github.com/PHZ76/RtspServer  
-
 https://pypi.org/project/rtsp/  
 https://zh.wikipedia.org/zh-tw/%E5%8D%B3%E6%99%82%E4%B8%B2%E6%B5%81%E5%8D%94%E5%AE%9A   
 https://tools.ietf.org/html/rfc2326  
 https://zh.wikipedia.org/wiki/%E5%AE%9E%E6%97%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE  
 https://b8807053.pixnet.net/blog/post/3611245  
 https://zh.wikipedia.org/wiki/H.264/MPEG-4_AVC  
+
+(6). 樹莓派架設 RTMP 串流（Streaming）伺服器，傳送即時攝影機影像
+
+reference:
+https://blog.gtwang.org/iot/raspberry-pi-nginx-rtmp-server-live-streaming/
 
 (10). opencv cross compile
 
