@@ -57,7 +57,7 @@ https://zh.wikipedia.org/wiki/H.264/MPEG-4_AVC
 
 (6). 樹莓派架設 RTMP 串流（Streaming）伺服器，傳送即時攝影機影像
 
-reference:
+reference:  
 https://blog.gtwang.org/iot/raspberry-pi-nginx-rtmp-server-live-streaming/
 
 (10). opencv cross compile
