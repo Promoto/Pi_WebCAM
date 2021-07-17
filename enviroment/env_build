@@ -41,7 +41,7 @@ bitbake-layers show-layers
 bitbake-layers remove-layer ../sources/meta-jumpnow
 
 ########################################################
-#########	Devtool for modify the source code #########
+#########	Devtool for modify the source code
 ########################################################
 
 devtool modify tf-a-stm32mp
