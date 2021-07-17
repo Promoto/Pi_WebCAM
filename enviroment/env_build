@@ -22,7 +22,15 @@ bitbake-layers add-layer ../sources/meta-openembedded/meta-perl/
 bitbake-layers add-layer ../sources/meta-qt5
 bitbake-layers add-layer ../sources/meta-security
 
-bitbake core-image-base
+bitbake core-image-base  
+
+[1] meta-raspberrypi
+https://github.com/agherzan/meta-raspberrypi
+https://readthedocs.org/projects/meta-raspberrypi/downloads/pdf/latest/  
+
+[2] Yocto Project Quick Start
+https://docs.yoctoproject.org/   
+https://www.yoctoproject.org/docs/1.5/yocto-project-qs/yocto-project-qs.html   
 
 ########################################################
 #########	Programing Image to SDCARD         

@@ -5,20 +5,28 @@ Target Board : Raspberry Pi 3 Model B+
 Hardware Information:  
 https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/?resellerType=home  
 
-(1). Create Yocto Project
+(1). Yocto Project Build RPI Enviroment
 
-1. Building Raspberry Pi Systems with Yocto (*)  
-https://jumpnowtek.com/rpi/Raspberry-Pi-Systems-with-Yocto.html  
-https://www.hackster.io/marc-antoine-woodcock/yocto-project-and-nas-server-on-raspberry-pi-3-41b58b  
-https://blog.csdn.net/zzs0829/article/details/109708216  
+	see ./enviroment/env_build
 
-2. Reference:    
-https://t.codebug.vip/questions-104850.htm  
-https://www.youtube.com/watch?v=zVLKPtGCtN4  
-http://kcmetercec.top/2019/09/17/yocto_build_raspberry_linux/  
-https://subscription.packtpub.com/book/virtualization_and_cloud/9781788399210  
-https://hal.archives-ouvertes.fr/hal-02271300/document  
-https://community.nxp.com/t5/i-MX-Processors/Yocto-with-a-package-manager-ex-apt-get/m-p/319701  
+(2).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 (2). Raspberry Pi META  
 
