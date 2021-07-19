@@ -1,5 +1,0 @@
-export PATH=$PATH:/home/jack/Yocto/sdk/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin
-CC = arm-linux-gnueabihf-gcc
-CXX = 
-LD = 
-AR = 

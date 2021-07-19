@@ -2,16 +2,17 @@
 #########	Building Up Yocto Enviroment       
 ########################################################
 
-git clone git://git.yoctoproject.org/poky.git
+git -b dunfell clone git://git.yoctoproject.org/poky.git
 mkdir sources
 cd sources
-git clone git://git.openembedded.org/meta-openembedded
-git clone https://github.com/agherzan/meta-raspberrypi.git
-git clone https://github.com/meta-qt5/meta-qt5
-git clone git://git.yoctoproject.org/meta-security.git
+git -b dunfell clone git://git.openembedded.org/meta-openembedded
+git -b dunfell clone https://github.com/agherzan/meta-raspberrypi.git
+git -b dunfell clone https://github.com/meta-qt5/meta-qt5
+git -b dunfell clone git://git.yoctoproject.org/meta-security.git
 cd ..
 
 source poky/oe-init-build-env rpi-build
+
 bitbake-layers add-layer ../sources/meta-raspberrypi 
 bitbake-layers add-layer ../sources/meta-openembedded/
 bitbake-layers add-layer ../sources/meta-openembedded/meta-oe/
@@ -32,11 +33,22 @@ https://readthedocs.org/projects/meta-raspberrypi/downloads/pdf/latest/
 https://docs.yoctoproject.org/   
 https://www.yoctoproject.org/docs/1.5/yocto-project-qs/yocto-project-qs.html   
 
+[3] Other guide
+https://blog.csdn.net/zzs0829/article/details/109708216
+https://gachiemchiep.github.io/cheatsheet/build_image_rpi3_yocto/
+
+########################################################
+#########	Get The Cross Compiler        
+########################################################
+
+bitbake core-image-base -c populate_sdk
+
 ########################################################
 #########	Programing Image to SDCARD         
 ########################################################
 
 sudo fdisk -l
+sudo fdisk /dev/sdb
 sudo apt-get install bmap-tools
 sudo bmaptool copy core-image-base-raspberrypi3.wic.bz2 /dev/sdb
 
@@ -95,5 +107,29 @@ https://www.raspberrypi.com.tw/tag/cross-compiler/
 ########################################################
 
 pip install flask
+
+########################################################
+######### patch file 	   						
+########################################################
+
+git init
+
+git status 
+
+git format-patch --root
+
+git am .
+
+refernece:
+https://ithelp.ithome.com.tw/articles/10188265
+
+
+
+
+ 
+
+
+
+
 
 
