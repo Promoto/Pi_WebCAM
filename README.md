@@ -4,7 +4,7 @@ Target Board : Raspberry Pi 3 Model B+
 
 (0). Hardware Information 
 
-	see [raspberry-pi-3-model-b-plus](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/?resellerType=home)
+	see https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/?resellerType=home
 	
 (1). Yocto Project Build RPI Enviroment
 
@@ -12,7 +12,7 @@ Target Board : Raspberry Pi 3 Model B+
 
 (3). Scan the Raspberry Pi IP  
 
-	see [advanced-ip-scanner](https://www.advanced-ip-scanner.com/tw/) 
+	see https://www.advanced-ip-scanner.com/tw/
 
 (4).  Samba
 
