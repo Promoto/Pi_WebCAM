@@ -16,9 +16,7 @@ Target Board : Raspberry Pi 3 Model B+
 
 (4).  Samba
 
-sudo apt-get install samba
-
-sudo vim /etc/samba/smb.conf
+	see ./document/samba
 
 (N). eBook  
 https://www.yoctoproject.org/docs/1.7.3/dev-manual/dev-manual.pdf  	

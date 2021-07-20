@@ -2,13 +2,13 @@
 #########	Building Up Yocto Enviroment       
 ########################################################
 
-git -b dunfell clone git://git.yoctoproject.org/poky.git
+git clone -b dunfell git://git.yoctoproject.org/poky.git
 mkdir sources
 cd sources
-git -b dunfell clone git://git.openembedded.org/meta-openembedded
-git -b dunfell clone https://github.com/agherzan/meta-raspberrypi.git
-git -b dunfell clone https://github.com/meta-qt5/meta-qt5
-git -b dunfell clone git://git.yoctoproject.org/meta-security.git
+git clone -b dunfell git://git.openembedded.org/meta-openembedded
+git clone -b dunfell https://github.com/agherzan/meta-raspberrypi.git
+git clone -b dunfell https://github.com/meta-qt5/meta-qt5
+git clone -b dunfell git://git.yoctoproject.org/meta-security.git
 cd ..
 
 source poky/oe-init-build-env rpi-build
@@ -38,18 +38,31 @@ https://blog.csdn.net/zzs0829/article/details/109708216
 https://gachiemchiep.github.io/cheatsheet/build_image_rpi3_yocto/
 
 ########################################################
-#########	Get The Cross Compiler        
+#########	Get&Use Cross Compiler        
 ########################################################
 
 bitbake core-image-base -c populate_sdk
+
+./poky-glibc-x86_64-core-image-base-cortexa7t2hf-neon-vfpv4-raspberrypi3-toolchain-3.1.9.sh
+
+echo /home/jack/rpi_yocto/sdk
+
+. environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+
+[1] Raspberry Pi Basic #003 : SDK Build and Test
+https://www.youtube.com/watch?v=YKQTYvqdcA8
 
 ########################################################
 #########	Programing Image to SDCARD         
 ########################################################
 
 sudo fdisk -l
-sudo fdisk /dev/sdb
+
+// please, erase the sdcard before programing
+sudo fdisk /dev/sdb 
+
 sudo apt-get install bmap-tools
+
 sudo bmaptool copy core-image-base-raspberrypi3.wic.bz2 /dev/sdb
 
 ########################################################
@@ -76,21 +89,6 @@ devtool finish tf-a-stm32mp meta-st-stm32mp
 
 reference:
 https://wiki.phytec.com/pages/viewpage.action?pageId=127338558
-
-########################################################
-######### CROSS COMPLIER ENV SETUP SCRIPT 	  
-########################################################
-
-sudo apt-get install make git-core ncurses-dev
-
-git clone https://github.com/raspberrypi/tools.git
-
-export PATH=$PATH:/home/jack/Yocto/sdk/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin
-
-arm-linux-gnueabihf-gcc hello.c -o hello-arm
-
-reference:  
-https://www.raspberrypi.com.tw/tag/cross-compiler/  
 
 ########################################################
 ######### Learn Tools 	   						
