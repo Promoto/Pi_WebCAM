@@ -1,0 +1,218 @@
+##############################################################################
+
+scp * root@192.168.203.91:/home/root/Code
+
+scp * root@192.168.203.86:/home/root/net-snmp
+
+scp * cyber@192.168.203.51:/home/cyber/Code
+
+sudo scp *.so TRAP-TEST-MIB.MIB root@192.168.203.109:/home/root/Code
+
+devtool modify linux-stm32mp
+
+devtool build linux-stm32mp
+
+devtool deploy-target linux-stm32mp root@192.168.203.79
+
+devtool deploy-target root@192.168.203.104
+
+/*************************/
+/*	lighttpd package     */
+/*************************/
+
+1. config file 
+2. get tcp payload
+3. login 
+
+openssl req -new -nodes -x509 -keyout server.pem -out server.pem -days 365
+
+sudo lsof -i -P -n
+
+/usr/sbin/snmpd -f // debug printf mod
+
+netstat -ant | grep LISTEN
+
+sudo netstat -lpn |grep 82
+sudo kill pid
+
+/* package remove */
+
+0. Updating System Packages
+
+$ sudo apt-get update && sudo apt-get upgrade
+
+1. The following command will remove a package and its global configuration.
+
+$ sudo apt-get remove --purge [PACKAGE]
+
+sudo apt-get remove --purge lighttpd
+
+2. If you want to remove the dependent packages that were installed with the package you are removing, add the autoremove switch. For example.
+
+$ sudo apt-get autoremove --purge [PACKAGE]
+
+sudo apt-get autoremove --purge lighttpd
+
+/* openssl installing on ubuntu 16.04 */
+
+https://cloudwafer.com/blog/installing-openssl-on-ubuntu-16-04-18-04/
+
+sudo wget http://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.51.tar.gz
+
+sudo tar -xf lighttpd-1.4.51.tar.gz
+
+cd lighttpd-1.4.51
+
+sudo ./configure --with-openssl
+
+cd /etc/ld.so.conf.d/
+
+sudo nano lighttpd-1.4.50c.conf
+
+/usr/local/lighttpd/lib
+
+sudo mv /usr/bin/lighttpd /usr/bin/lighttpd.backup
+
+sudo wget https://www.openssl.org/source/openssl-1.1.1-r0.tar.gz
+
+
+/* MP1 Cross Compile */
+
+source /home/cyber/MP1/sdk/environment-setup-cortexa7t2hf-neon-vfpv4-openstlinux_weston-linux-gnueabi
+
+sudo ./configure CC='/home/cyber/MP1/sdk/sysroots/x86_64-openstlinux_weston_sdk-linux/usr/bin/arm-openstlinux_weston-linux-gnueabi/arm-openstlinux_weston-linux-gnueabi-gcc -march=armv7ve -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 --sysroot=/home/cyber/MP1/sdk/sysroots/cortexa7t2hf-neon-vfpv4-openstlinux_weston-linux-gnueabi -mbe32' --host=arm --config-cache --with-openssl 
+
+snmpget -v2c -c public localhost CISCO-RHINO-MIB::ciscoLS1010ChassisFanLed
+
+linux systemd/init.d/service
+
+# kevin
+IMAGE_INSTALL_append = " lighttpd vsftpd vim xinetd netkit-telnet screen nfs-utils sqlite3 make tzdata net-snmp-server-snmpd"
+
+# Jack
+IMAGE_INSTALL_append = " lighttpd vsftpd vim sudo openssl net-snmp xinetd netkit-telnet screen nfs-utils lsof perl"
+
+PACKAGE_EXCLUDE = "package_name package_name package_name ..."
+
+Hi Jack:
+UPS: 192.168.203.69
+BM: 192.168.203.77
+
+//
+sudo scp *.so Test-MIB.my MIB002-0001-trunk.MIB root@192.168.203.79:/home/root/Code
+
+// To remove temp
+bitbake -c clean net-snmp
+// To remove temp and sstate cache (I use this most):
+bitbake -c cleansstate net-snmp
+// To remove download as well, and lets begin build starting from do_fetch and all
+bitbake -c cleanall net-snmp
+// Once you are done with either of these clean, which ever suits you, you can simple give build command for the specified:
+bitbake net-snmp
+
+// rebuild yocto images
+$ bitbake –c clean st-image-weston
+$ bitbake st-image-weston
+
+bitbake -c listtasks net-snmp
+bitbake -c do_xxx <package>
+
+/home/cyber/Yocto/build-openstlinuxweston-stm32mp1/tmp-glibc/work/stm32mp1-ostl-linux-gnueabi/st-image-weston/1.0-r0/temp/log.do_rootfs
+
+/**************************************/
+/**				RAM				     **/
+/**************************************/
+
+1. htop
+2. cat /proc/meminfo
+
+/**************************************/
+/**		     SNMP RELATED		     **/
+/**************************************/
+
+#
+sudo lsof -i -P -n
+
+#
+sudo systemctl enable snmpd.service 
+sudo systemctl daemon-reload
+systemctl restart snmpd.service 
+sudo systemctl start snmpd.service 
+systemctl status snmpd.service
+systemctl stop snmpd.service
+sudo chmod 644 /etc/systemd/system/snmpd.service
+
+systemctl reset-failed snmpd.service 
+
+# install flow
+yocto + net-snmp
+sudo make clean
+./configure --host=arm-linux --target=arm-linux --with-default-snmp-version="3"
+sudo chmod -R 777 *
+sudo chown cyber:cyber -R * 
+make
+sudo make install
+
+./configure --host=x86_64-openstlinux_weston_sdk-linux --target=arm-openstlinux_weston-linux-gnueabi --with-default-snmp-version="3"
+
+/**************************************/
+/**		     		SED	     		 **/
+/**************************************/
+
+sed -i '1s/.*/001/g' test.txt
+
+////////////////////////////////////
+// process id and process uptime //
+///////////////////////////////////
+
+systemctl restart snmpd.service 
+pidof snmpd 
+ps -p 20291 -o etimes
+ps -p 20291 -o etimes=
+ps -p 20291 -eo comm,etime
+
+///////////////////////////////////
+//		Uboot Compilation		///
+///////////////////////////////////
+
+$ git clone https://github.com/STMicroelectronics/u-boot
+$ export KBUILD_OUTPUT=../build/stm32mp15_trusted
+$ export DEVICE_TREE=stm32mp157c-ev1
+$ make stm32mp15_basic_defconfig
+$ make DDR_INTERACTIVE=1 all
+
+Reference:
+https://wiki.st.com/stm32mpu/wiki/U-Boot_SPL:_DDR_interactive_mode
+https://wiki.st.com/stm32mpu/wiki/U-Boot_overview#U-Boot_build
+https://wiki.st.com/stm32mpu/wiki/STM32MP15_U-Boot#SPL_compilation
+
+//////////////////////////////////////////////////////////////////////
+//			Dirve the stm32mp1 board (打草稿中)						//
+//////////////////////////////////////////////////////////////////////
+
+(1) UBOOT
+	uboot-source\arch\arm\dts
+	
+	編譯工具:
+	1. Yocto Projcet
+	2. devtool 
+	3. 
+
+(2) KERNEL
+	kernel-source\arch\arm\boot\dts
+	
+後續驅動開發版想法
+
+1. 	使用cubemx調整腳位 並產生dts檔案
+
+2. 	使用devtool產生distrobution linux的source Code，
+	並將上面PATH1和PATH2內的dts檔搭配cubemx所產生的檔案進行調整並產生dtb。
+
+3.	塞入u-boot和kernel-source 進行燒錄及驗證
+
+編譯工具
+
+
+
+
+
