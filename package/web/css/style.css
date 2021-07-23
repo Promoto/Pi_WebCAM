@@ -1,0 +1,30 @@
+.demo {
+	border: blueviolet 1px solid;
+}
+
+.a {
+	width: 100%;
+}
+
+.b {
+	width: 30%;
+}
+
+.c {
+	width: 70%;
+}
+
+.d {
+	width: 100%;
+}
+
+.container {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+@media screen and (max-width:800px) {
+	.b, .c{
+		width: 100%;
+	}
+}
